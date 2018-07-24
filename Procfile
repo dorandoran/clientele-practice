@@ -1,1 +1,1 @@
-web: gunicorn clientele.wsgi --log-file-
+web: gunicorn clientele.wsgi
