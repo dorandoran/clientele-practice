@@ -1,20 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap %}
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ form }}
+{% block title %} Welcome - Login {% endblock %}
 
-        <button type="submin">Login</button>
-    </form>
+{% block main %}
+    <div class="jumbotron">
+        <h1 class="text-center">Login Page</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|bootstrap }}
 
-</body>
-</html>
+            <button type="submin" class="btn btn-info">Login</button>
+        </form>
+    </div>
+
+{% endblock %}
